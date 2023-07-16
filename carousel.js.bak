@@ -1,0 +1,24 @@
+const slider = document.querySelector('.slider');
+let scrollLeft = 0;
+
+// Fonction pour faire défiler vers la gauche
+function slideLeft() {
+  scrollLeft -= 620; // Ajustez la valeur du défilement selon la largeur de vos images + marge
+  slider.style.transform = `translateX(${scrollLeft}px)`;
+}
+
+// Fonction pour faire défiler vers la droite
+function slideRight() {
+  scrollLeft += 620; // Ajustez la valeur du défilement selon la largeur de vos images + marge
+  slider.style.transform = `translateX(${scrollLeft}px)`;
+}
+
+// Ajoutez des écouteurs d'événements pour détecter le défilement de la souris
+document.querySelector('.slider-container').addEventListener('wheel', (event) => {
+  event.preventDefault(); // Empêche le défilement de la page
+  if (event.deltaY < 0) {
+    slideLeft(); // Défilement vers la gauche
+  } else {
+    slideRight(); // Défilement vers la droite
+  }
+});

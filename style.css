@@ -1,0 +1,36 @@
+.card {
+    width: 300px;
+    height: 400px;
+    border-radius: 5px;
+    overflow: hidden;
+    /* transition: transform 0.2s;  *//* Ajoutez une transition pour un effet d'animation */
+  }
+
+  /* Styles pour le rollover (survol) de l'image */
+
+
+/* .card:nth-child(odd) {
+    background-color: blue;
+}
+.card:nth-child(even) {
+    background-color: rgb(0, 183, 255);
+}
+ */
+.slider-container {
+    width: 80%;
+    height: 350px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+}
+.inner-slider {
+    /* width: 150%; */
+    display: flex;
+    gap: 10px;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
